@@ -1,0 +1,246 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  height: 100vh;
+  line-height: var(--spacing-l);
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture, i {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+/* Font face */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat_700.ttf") format("truetype");
+  src: url("/assets/fonts/Montserrat_700.woff") format("woff");
+  src: url("/assets/fonts/Montserrat_700.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat_500.ttf") format("truetype");
+  src: url("/assets/fonts/Montserrat_500.woff") format("woff");
+  src: url("/assets/fonts/Montserrat_500.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat_400.ttf") format("truetype");
+  src: url("/assets/fonts/Montserrat_400.woff") format("woff");
+  src: url("/assets/fonts/Montserrat_400.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces_700.ttf") format("truetype");
+  src: url("/assets/fonts/Fraunces_700.woff") format("woff");
+  src: url("/assets/fonts/Fraunces_700.woff2") format("woff2");
+  font-weight: 700;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: hsl(30, 38%, 92%);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  margin: 20px;
+  max-width: 340px;
+}
+@media (min-width: 768px) {
+  section {
+    max-width: 600px;
+    flex-direction: row;
+  }
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+}
+
+h2 {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+}
+
+p {
+  color: hsl(228, 12%, 48%);
+}
+
+img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: url(/assets/images/image-product-mobile.webp);
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  img {
+    background-image: url(/assets/images/image-product-desktop.webp);
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+}
+
+button {
+  width: 100%;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: hsl(157, 36%, 20%);
+}
+
+a {
+  color: hsl(158, 36%, 37%);
+}
+a:hover {
+  color: hsl(157, 36%, 20%);
+}
+
+.content {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .content {
+    max-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.price-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.original-price {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  color: hsl(158, 36%, 37%);
+}
+
+.discounted-price {
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+}
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .flex-column {
+    justify-content: space-evenly;
+  }
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}/*# sourceMappingURL=main.css.map */

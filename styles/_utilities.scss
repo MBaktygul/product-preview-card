@@ -1,0 +1,25 @@
+.flex {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh; 
+  margin: 0; 
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+
+
+  @media (min-width: $breakpoint-desktop) {
+    justify-content: space-evenly;
+  }
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}

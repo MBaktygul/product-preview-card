@@ -1,0 +1,36 @@
+.content {
+  padding: 20px;
+
+  @media (min-width: $breakpoint-desktop) {
+    max-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.price-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: $gap;
+}
+
+.original-price {
+  font-family: $font-serif;
+  font-size: $font-size-large;
+  color: $dark-cyan;
+}
+
+.discounted-price {
+  text-decoration: line-through;
+  color: $dark-grayish-blue;
+}
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
